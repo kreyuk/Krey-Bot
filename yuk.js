@@ -2779,6 +2779,14 @@ if (!q) throw `Example : ${prefix + command} www.apkpure.com`
    kreyuk.sendMessage(from, { image: { url: img}, caption: 'Tuh' }, { quoted: msg })
 }
 break
+case 'darkjokes': {
+reply('tunggu bentar')
+var but = [{buttonId: `.${command}`, buttonText: { displayText: "NEXT➡️" }, type: 1 }]
+let dajo = await ('https://api.zahwazein.xyz/randomimage/darkjoke?apikey=787520e1bc')
+kreyuk.sendMessage(from, { caption: 'nih', image: { url: dajo }, buttons: but, }, { quoted: msg })
+}
+break
+
 
 }} catch (err) {
 console.log(color('[ERROR]', 'red'), err)
